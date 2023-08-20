@@ -6,6 +6,7 @@ permissions:
 on:
   push:
     tags:
+      - 'v*'
 
 env:
   DOCKER_BUILDKIT: '1'
