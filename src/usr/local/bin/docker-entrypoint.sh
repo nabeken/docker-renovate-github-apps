@@ -26,8 +26,8 @@ if ${ENABLE_GO_GITHUB_APPS}; then
   echo "INFO: Exporting GITHUB_TOKEN..." >&2
   eval "$(go-github-apps -export -app-id "${GO_GITHUB_APPS_APP_ID}" -inst-id "${GO_GITHUB_APPS_INST_ID}")"
 
-  echo "INFO: Using the exported GITHUB_TOKEN as RENOVATE_TOKEN..." >&2
-  export RENOVATE_TOKEN=$GITHUB_TOKEN
+  echo "INFO: Using the exported GITHUB_TOKEN as GITHUB_COM_TOKEN..." >&2
+  export GITHUB_COM_TOKEN=$GITHUB_TOKEN
 else
   echo "WARN: go-github-apps won't run because there are missing environment variables" >&2
 fi
