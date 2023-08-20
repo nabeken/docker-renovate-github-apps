@@ -14,8 +14,18 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-    - name: Check out code into the Go module directory
+    - name: Get GITHUB_TOKEN for checkout
+      uses: nabeken/go-github-apps@d189a167116aca75bf64df66b602894206fce3e7 # v0
+      id: go-github-apps
+      with:
+        installation_id: ${{ secrets.renovate_app_inst_id }}
+        app_id: ${{ secrets.renovate_app_id }}
+        private_key: ${{ secrets.renovate_app_priv_key }}
+
+    - name: Check out code with the Github App Installation Token
       uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3
+      with:
+        token: '${{ steps.go-github-apps.outputs.app_github_token }}'
 
     - uses: fregante/setup-git-user@77c1b5542f14ab6db4b8462d6857e31deb988b09 # v2
 
