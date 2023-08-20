@@ -6,6 +6,8 @@ permissions:
 on:
   push:
     branches: [ main ]
+  release:
+    types: [published]
 
 env:
   DOCKER_BUILDKIT: '1'
