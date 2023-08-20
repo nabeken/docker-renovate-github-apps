@@ -1,4 +1,6 @@
 # docker-renovate-github-apps
+[![Sync with upstream](https://github.com/nabeken/docker-renovate-github-apps/actions/workflows/sync_with_upstream.yml/badge.svg)](https://github.com/nabeken/docker-renovate-github-apps/actions/workflows/sync_with_upstream.yml)
+[![Docker Image](https://github.com/nabeken/docker-renovate-github-apps/actions/workflows/docker-image.yml/badge.svg)](https://github.com/nabeken/docker-renovate-github-apps/actions/workflows/docker-image.yml)
 
 `docker-renovate-github-apps` is a container image to run [the official Renovate image](https://github.com/renovatebot/docker-renovate/tree/main) with Github Apps Installation Token.
 
