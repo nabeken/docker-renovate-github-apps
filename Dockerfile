@@ -5,7 +5,7 @@ LABEL org.opencontainers.image.source=https://github.com/nabeken/docker-renovate
   org.opencontainers.image.licenses="AGPL-3.0-only"
 
 # renovate: datasource=github-releases depName=nabeken/go-github-apps
-env GO_GITHUB_APPS_VERSION=0.1.9
+ENV GO_GITHUB_APPS_VERSION=0.1.9
 
 # run as root
 USER 0
