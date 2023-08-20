@@ -16,6 +16,15 @@ For more details, please visit https://github.com/nabeken/go-github-apps
 
 TBD
 
+## Release
+
+This project will not have Github Release but tags that are the corresponding upstream container images.
+
+- Renovate will update the upstream version in `Dockerfile`
+- Renovate will merge it automatically
+- Github Actions will create or update a corresponding tag in this repository
+- Github Actions will build a container image and push it
+
 ## Build
 
 ```
