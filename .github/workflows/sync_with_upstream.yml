@@ -2,7 +2,8 @@ name: Sync with upstream
 
 on:
   workflow_dispatch:
-  push: [ main ]
+  push:
+    branches: [ main ]
 
 jobs:
   build:
