@@ -14,7 +14,11 @@ For more details, please visit https://github.com/nabeken/go-github-apps
 
 ## Usage in Github Actions
 
-TBD
+See https://github.com/nabeken/renovate-config-oss/blob/main/.github/workflows/renovate.yml
+
+## Container images
+
+https://github.com/nabeken/docker-renovate-github-apps/pkgs/container/renovate-github-apps
 
 ## Release
 
@@ -22,7 +26,7 @@ This project will not have Github Release but tags that are the corresponding up
 
 - Renovate will update the upstream version in `Dockerfile`
 - Renovate will merge it automatically
-- Github Actions will create or update a corresponding tag in this repository
+- Github Actions will create or update a corresponding tag in this repository with Github Apps Installation Token because the default `GITHUB_TOKEN` won't trigger an event
 - Github Actions will build a container image and push it
 
 ## Build
