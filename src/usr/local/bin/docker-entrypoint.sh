@@ -17,8 +17,13 @@ if [ -z "${GITHUB_PRIV_KEY}" ]; then
   ENABLE_GO_GITHUB_APPS=false
 fi
 
+if [ "${RENOVATE_TOKEN}" = "_ACTION_DUMMY_" ]; then
+  echo "INFO: RENOVATE_TOKEN is set to the dummy value to use Github Apps integration. Going to unset it..." >&2
+  unset RENOVATE_TOKEN
+fi
+
 if ${ENABLE_GO_GITHUB_APPS}; then
-  echo "Exporting GITHUB_TOKEN to /usr/local/etc/env..." >&2
+  echo "Exporting GITHUB_TOKEN..." >&2
   eval "$(go-github-apps -export -app-id "${GO_GITHUB_APPS_APP_ID}" -inst-id "${GO_GITHUB_APPS_INST_ID}")"
 else
   echo "WARN: go-github-apps won't run because there are missing environment variables" >&2
