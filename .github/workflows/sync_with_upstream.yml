@@ -21,6 +21,6 @@ jobs:
 
     - name: Tag the actions release tag
       run: |
-        LATEST_TAG=$(grep -E '^FROM renovate/renovate:' Dockerfile | cut -d: -f2 | cut -d@ -f1)
+        LATEST_TAG=v$(grep -E '^FROM renovate/renovate:' Dockerfile | cut -d: -f2 | cut -d@ -f1)
         git tag -f "${LATEST_TAG}"
         git push -f origin "refs/tags/${LATEST_TAG}"
