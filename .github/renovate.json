@@ -16,8 +16,14 @@
     {
       "matchUpdateTypes": ["minor", "patch"],
       "matchPackagePatterns": [
-        "renovate/renovate",
         "nabeken/go-github-apps"
+      ],
+      "automerge": true
+    },
+    {
+      "matchUpdateTypes": ["minor", "patch", "digest"],
+      "matchPackagePatterns": [
+        "renovate/renovate"
       ],
       "automerge": true
     }
