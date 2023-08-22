@@ -22,6 +22,11 @@ RUN set -eo pipefail; \
 # override the base image
 COPY src/ /
 
+# setup the directories again to set the proper permissions
+RUN set -eo pipefail; \
+  . /usr/local/containerbase/util.sh; \
+  setup_directories;
+
 # run as user
 # https://github.com/renovatebot/docker-renovate-full/blob/main/Dockerfile
 USER 1000
