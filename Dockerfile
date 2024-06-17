@@ -1,11 +1,11 @@
-# syntax=docker/dockerfile:1.7@sha256:a57df69d0ea827fb7266491f2813635de6f17269be881f696fbfdf2d83dda33e
-FROM renovate/renovate:37.402.0@sha256:39b1f3ece71f0df294626dbf838945204c36d005ff0f7dcd03070976bf21be92
+# syntax=docker/dockerfile:1.8@sha256:d6d396f3780b1dd56a3acbc975f57bd2fc501989b50164c41387c42d04e780d0
+FROM renovate/renovate:37.410.1@sha256:fcbf89f80b708a3b647fd844e359637b70e6904168bdb7275ecef630a226f947
 
 LABEL org.opencontainers.image.source=https://github.com/nabeken/docker-renovate-github-apps \
   org.opencontainers.image.licenses="AGPL-3.0-only"
 
 # renovate: datasource=github-releases depName=nabeken/go-github-apps
-ENV GO_GITHUB_APPS_VERSION=v0.1.13
+ENV GO_GITHUB_APPS_VERSION=v0.1.15
 
 # run as root
 USER 0
