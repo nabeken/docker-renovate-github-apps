@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Get GITHUB_TOKEN for checkout
-      uses: nabeken/go-github-apps@ad9874fea2c2c0799b7bc0dece5e3f1251c72eaf # v0
+      uses: nabeken/go-github-apps@afd4a1da8d2eafaa6902580a943dc17dfd055ba9 # v0
       id: go-github-apps
       with:
         installation_id: ${{ secrets.renovate_app_inst_id }}
@@ -31,7 +31,7 @@ jobs:
       with:
         token: '${{ steps.go-github-apps.outputs.app_github_token }}'
 
-    - uses: fregante/setup-git-user@77c1b5542f14ab6db4b8462d6857e31deb988b09 # v2
+    - uses: fregante/setup-git-user@024bc0b8e177d7e77203b48dab6fb45666854b35 # v2
 
     - name: Tag the actions release tag
       run: |
