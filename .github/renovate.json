@@ -15,15 +15,15 @@
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch"],
-      "matchPackagePatterns": [
-        "nabeken/go-github-apps"
+      "matchPackageNames": [
+        "/nabeken/go-github-apps/"
       ],
       "automerge": true
     },
     {
       "matchUpdateTypes": ["minor", "patch", "digest"],
-      "matchPackagePatterns": [
-        "renovate/renovate"
+      "matchPackageNames": [
+        "/renovate/renovate/"
       ],
       "automerge": true
     }

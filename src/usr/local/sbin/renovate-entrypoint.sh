@@ -1,5 +1,5 @@
 #!/bin/bash
-ORIG_ENTRYPOINT=/usr/local/bin/orig-docker-entrypoint.sh
+ORIG_ENTRYPOINT=/usr/local/sbin/orig-renovate-entrypoint.sh
 ENABLE_GO_GITHUB_APPS=true
 
 if [ -z "${GO_GITHUB_APPS_APP_ID}" ]; then
