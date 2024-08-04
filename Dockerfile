@@ -17,15 +17,10 @@ RUN set -eo pipefail; \
 
 # preserve the orinal entrypoint
 RUN set -eo pipefail; \
-  cp /usr/local/bin/docker-entrypoint.sh /usr/local/bin/orig-docker-entrypoint.sh
+  cp /usr/local/sbin/renovate-entrypoint.sh /usr/local/sbin/orig-renovate-entrypoint.sh
 
 # override the base image
 COPY src/ /
-
-# setup the directories again to set the proper permissions
-RUN set -eo pipefail; \
-  . /usr/local/containerbase/util.sh; \
-  setup_directories;
 
 # run as user
 # https://github.com/renovatebot/docker-renovate-full/blob/main/Dockerfile
