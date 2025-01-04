@@ -23,5 +23,5 @@ RUN set -eo pipefail; \
 COPY src/ /
 
 # run as user
-# https://github.com/renovatebot/docker-renovate-full/blob/main/Dockerfile
-USER 1000
+# https://github.com/renovatebot/renovate/blob/main/tools/docker/Dockerfile
+USER 12021
