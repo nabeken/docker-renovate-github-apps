@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.16@sha256:e2dd261f92e4b763d789984f6eab84be66ab4f5f08052316d8eb8f173593acf7
-FROM renovate/renovate:40.59.3@sha256:05be7b253d4f88c8d0a2c5b522c190af7f3dbefb45feb6881889543eb216bb8d
+FROM renovate/renovate:40.59.4@sha256:844e8261c751e12a336b4644d4c60b21edba443b2a6399f926709c4b15e4dd3e
 
 LABEL org.opencontainers.image.source=https://github.com/nabeken/docker-renovate-github-apps \
   org.opencontainers.image.licenses="AGPL-3.0-only"
