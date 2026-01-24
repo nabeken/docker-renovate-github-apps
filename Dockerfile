@@ -1,4 +1,4 @@
-# syntax=docker/dockerfile:1.20@sha256:26147acbda4f14c5add9946e2fd2ed543fc402884fd75146bd342a7f6271dc1d
+# syntax=docker/dockerfile:1.21@sha256:27f9262d43452075f3c410287a2c43f5ef1bf7ec2bb06e8c9eeb1b8d453087bc
 FROM renovate/renovate:42.92.3@sha256:6b3d44a4f6322c088b78b8a831ea47a927d02e4cb9ecfd5420f14df506dd4646
 
 LABEL org.opencontainers.image.source=https://github.com/nabeken/docker-renovate-github-apps \
